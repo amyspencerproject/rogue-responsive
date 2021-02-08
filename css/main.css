@@ -229,11 +229,51 @@ footer span {
 
 /* ----------- Desktop Screenlarger than 1200px wide ----------- */
 
- @media (min-width: 1200px) {
-	.header {
+@media (min-width: 1200px) {
+	header {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
 		flex-flow: row nowrap;
-		margin: 0em 0em;
 	} 
+
+	header h1 {
+		margin: 0.315em 0;
+		padding: 0.63em 0; 
+		border-bottom: 0em solid #34a7b2; /* Overide border */
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		width: 100%;
+	}
+
+	header nav ul {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		flex-flow: row nowrap;
+	}
+
+	header nav ul li {
+		padding: 0em .88em;
+	}
+
+
+	/***** BOTTOM SECTION STYLES *****/
+	.section-one,
+	.section-three {
+		padding: .63em 0;
+	}
+
+	/* Trying to get vertical section borders to touch footer top border */
+	.section-two {
+		/* height: inherit; */
+		/* height: 100%; */
+		padding-top: 0.63em;
+		padding-bottom: 2.5%;
+	}
+	
+	
+}
