@@ -201,6 +201,7 @@ footer span {
 /* ----------- Tablets larger than 768px wide ----------- */
 @media (min-width: 768px) {
 	.bottom-section {
+		border-top:.063em solid #ccc; /*gives solid border w/out tiny breaks btwn sections */
 		display: flex;
 		justify-content: space-around;
 		align-items: flex-start;
@@ -211,6 +212,7 @@ footer span {
 	.section-one,
 	.section-two,
 	.section-three {
+		border-top: 0em solid #ccc; /* overrides border in bottom-section styles for mobile */
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -227,11 +229,11 @@ footer span {
 
 /* ----------- Desktop Screenlarger than 1200px wide ----------- */
 
-/* @media (min-width: 1200px) {
+ @media (min-width: 1200px) {
 	.header {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-flow: row nowrap;
 		margin: 0em 0em;
-	} */
+	} 
