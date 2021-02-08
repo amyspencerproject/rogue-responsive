@@ -1,3 +1,6 @@
+/****** BASE STYLES AND FLEXBOX*****/
+/* USING MOBILE FIRST APPROACH FOR RESPONSIVE */
+
 html {
 	font-size: 16px;
 }
@@ -44,7 +47,8 @@ p {
     padding: 0 1.3em;
 }
 
-/*The widths are in a percentage!*/
+/***** HEADER STYLES *****/
+
 header {
 	height: auto;
 	width: 100%;
@@ -92,21 +96,14 @@ header nav ul li a {
 	color:#34a7b2;
 }
 
-/*The widths are in a percentage!*/
+/***** TOP SECTION STYLES *****/
+
 .top-section {
 	margin: 0.63em auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
-}
-
-.bottom-section {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow: column wrap;
-	margin: .63em 0em;
 }
 
 .main-image {
@@ -133,6 +130,16 @@ header nav ul li a {
 	text-align: left;
 }
 
+/***** bOTTOM SECTION STYLES *****/
+
+.bottom-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column wrap;
+	margin: .63em 0em;
+}
+
 .section-one,
 .section-two,
 .section-three {
@@ -140,12 +147,6 @@ header nav ul li a {
 	height: auto;
 	border-top:.063em solid #ccc;
 	margin: 0.63em 0em;
-}
-
-
-.section-two {
-	/* border-left: .063em solid #ccc;
-	border-right: .063em solid #ccc; */
 }
 
 .section-one h3,
@@ -174,7 +175,8 @@ header nav ul li a {
 	line-height: 1.5em;
 }
 
-/*The widths are in a percentage!*/
+/***** FOOTER STYLES *****/
+
 footer {
 	height: auto;
 	width: 100%;
@@ -193,3 +195,43 @@ footer span {
 	color: #34a7b2;
 	font-size: 0.88em;
 }
+
+/******* MEDIA QUERIES  ********/
+
+/* ----------- Tablets larger than 768px wide ----------- */
+@media (min-width: 768px) {
+	.bottom-section {
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-start;
+		flex-flow: row nowrap;
+		margin: 0em 0em;
+	}
+
+	.section-one,
+	.section-two,
+	.section-three {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: column wrap;
+		margin: 0em 0em;
+		width: 33%;
+	}
+
+	.section-two {
+		border-left: .063em solid #ccc;
+		border-right: .063em solid #ccc;
+	}
+}
+
+/* ----------- Desktop Screenlarger than 1200px wide ----------- */
+
+/* @media (min-width: 1200px) {
+	.header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row nowrap;
+		margin: 0em 0em;
+	} */
